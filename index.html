@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/png" href="favicon.png"/>
+	</meta>
+        <title> We are Anonymous. We are Legion. We do not forgive. We do not forget. </title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
+		<script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+		<style>
+
+		/* Google Fonts */
+		@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+		/* Global */
+		.typewriter1 {
+			margin-top: 200px;
+			margin-bottom: 100px;
+		}
+		.typewriter1 {
+		  height: calc(100vh - 8em);
+		  padding: 4em;
+		  color: rgba(255,255,255,.75);
+		  font-family: 'Anonymous Pro', monospace;
+		}
+		.line-1{
+		    position: relative;
+		    top: 50%;
+		    margin: 0 auto;
+		    font-size: 180%;
+		    text-align: center;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    transform: translateY(-50%);
+		}
+		.blink_me {
+		  animation: blinker 1s linear infinite;
+		}
+
+		@keyframes blinker {
+		  50% {
+		    opacity: 0;
+		  }
+		}
+		/* Animation */
+		.anim-typewriter{
+		  animation: typewriter 4s steps(44) 1s 1 normal both,
+		             blinkTextCursor 500ms steps(44) infinite normal;
+		}
+		@keyframes typewriter{
+		  from{width: 0;}
+		  to{width: 24em;}
+		}
+		@keyframes blinkTextCursor{
+		  from{border-right-color: rgba(255,255,255,.75);}
+		  to{border-right-color: transparent;}
+		}
+		.MainTable {
+    margin: 100px;
+		margin-top: 200px !important;
+		background-color: white !important;
+		cursor: pointer !important;
+		color: green !important;
+		border-color: green !important;
+		}
+		.metro-no-touch-device{
+			background-color: black;
+		}
+		body {
+			background-color: black;
+		}
+		#tablesID * {
+    border-color: green !important;
+		}
+		#scrolley * {
+    border-color: green !important;
+		}
+		.table .sortable-column, .table .sorting {
+    color: green !important;
+		background-color: black;
+		border-color: green !important;
+		}
+		a:not([href]):not([tabindex]) {
+    color: green;
+		background-color: black;
+		}
+		.clickable {
+			cursor: pointer !important;
+		}
+		.input input {
+    color: green;
+		background-color: black;
+		}
+		.input .prepend {
+    color: green;
+		background-color: black;
+		}
+		.table-component {
+		cursor: pointer !important;
+		background-color: black !important;
+		}
+		.table {
+			cursor: pointer !important;
+			background-color: black;
+		}
+		tr:nth-child(even) {
+			background: rgb(15, 15, 15); !important
+		}
+		tr:nth-child(odd) {
+			background: black !important
+		}
+
+		.table .sortable-column.sort-asc, .table .sortable-column.sort-desc, .table .sortable-column.sorting_asc, .table .sortable-column.sorting_desc, .table .sorting.sort-asc, .table .sorting.sort-desc, .table .sorting.sorting_asc, .table .sorting.sorting_desc {
+    	background: rgb(15, 15, 15); !important
+		}
+		.input .button-group {
+    background-color: black;
+		}
+		img{
+			height: 300px;
+			display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+			margin-top: 80px;
+			margin-bottom: 80px;
+	}
+	.scroll-downs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+	margin-top: 380px !important;
+  width :34px;
+  height: 55px;
+	color: green !important;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+.pagination {
+	padding-bottom: 100px !important;
+}
+		</style>
+    </head>
+    <body>
+	<section id="sec1">
+			<div class="noclass" id="hero-image">
+			<div class="landed">
+			<img src="landing.png">
+		</div>
+		<div class="scroll-downs" id="scrolley">
+  <div class="mousey">
+    <div class="scroller"></div>
+  </div>
+	<div class="text">Scroll</div>
+</div>
+</div>
+</section>
+<section id="sec2">
+<div class="typewriter1" id="typewriter2">
+<div class="line-1" id="typedtext"></div>
+</div>
+</section>
+<section id="sec3">
+			<div class="MainTable" id="tablesID">
+			<table id="tableId" class="table striped table-border mt-4"
+			       data-role="table"
+						 data-rows="21"
+						 data-cls-body-row="clickable"
+						 data-on-draw="addRowHandlers()"
+						 data-show-rows-steps="false"
+			       data-source="data/table.json">
+			</table>
+		</div>
+</section>
+<span class="nothingtoseehere"> <span>
+<script type="text/javascript">
+	function addRowHandlers() {
+		const numFormatter = new Intl.NumberFormat('en-US', {
+  style: "decimal",
+  maximumFractionDigits: 2
+})
+		var btczar;
+		$.getJSON('https://api.coindesk.com/v1/bpi/currentprice/ZAR.json', function(data) {
+			let btczar = data.bpi.ZAR.rate
+			//var btczar2 = (+btczar);
+			let btczar2 = parseInt((btczar.replace(',','')))
+			//console.log(total);
+			//var res = btczar.slice(0, -5);
+			//console.log(res);
+			var table = document.getElementById("tableId");
+			var rows = table.getElementsByTagName("tr");
+			for (i = 0; i < rows.length; i++) {
+				var currentRow = table.rows[i];
+				table.rows[0].cells[5].innerHTML = 'Total in ZAR @ R' + btczar;
+				let btc = table.rows[i].cells[4].innerText;
+				roundtotal = numFormatter.format(btc*btczar2);
+				table.rows[i].cells[5].innerHTML = ("R "+roundtotal);
+				//var vals = currentRow.getElementsByTagName("td")[5];
+				//console.log(vals);
+				var createClickHandler = function(row) {
+					return function() {
+						var cell = row.getElementsByTagName("td")[7];
+						var id = cell.innerText;
+						//alert(id);
+						window.open(id,'_blank');
+					};
+				};
+				currentRow.onclick = createClickHandler(currentRow);
+			}
+});
+		}
+		$(document).ready(function(){
+    $(window).scroll(function(){
+        $("#hero-image").css("opacity", 1 - $(window).scrollTop() / ($('#hero-image').height() / 0.9));
+				$("#tablesID").css("opacity", 0 + $(window).scrollTop() / ($('#tablesID').height() / 2));
+    });
+});
+
+// set up text to print, each item in array is new line
+var aText = new Array(
+"The Truth Will Set You Free...",
+"But First It Will Piss You Off!",
+" ",
+"Below you will find a list",
+"Click on any name to uncover all.",
+"Your ignorance is their power.",
+"the key is spelled TXID",
+" ",
+" ",
+"We are Anonymous.We are Legion.We do not forgive.We do not forget.",
+"Expect us"
+);
+var iSpeed = 100; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 20; // start scrolling up at this many lines
+
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+
+function typewriter()
+{
+ sContents =  ' ';
+ iRow = Math.max(0, iIndex-iScrollAt);
+ var destination = document.getElementById("typedtext");
+
+ while ( iRow < iIndex ) {
+  sContents += aText[iRow++] + '<br />';
+ }
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "<span class='blink_me'>_</span>";
+ if ( iTextPos++ == iArrLength ) {
+  iTextPos = 0;
+  iIndex++;
+  if ( iIndex != aText.length ) {
+   iArrLength = aText[iIndex].length;
+   setTimeout("typewriter()", 1000);
+  }
+ } else {
+  setTimeout("typewriter()", iSpeed);
+ }
+}
+
+var waypoint = new Waypoint({
+  element: document.getElementById('typewriter2'),
+  handler: function(direction) {
+		typewriter();
+ 		$('body').addClass('stop-scrolling')
+		$('body').bind('touchmove', function(e){e.preventDefault()})
+ 	 	setTimeout("alertFunc()", 35000);
+    this.destroy()
+  },
+  offset: 'bottom-in-view'
+})
+
+function alertFunc() {
+$('body').removeClass('stop-scrolling')
+$('body').unbind('touchmove')
+}
+</script>
+    </body>
+</html>
