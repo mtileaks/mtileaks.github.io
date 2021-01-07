@@ -1,0 +1,847 @@
+/*
+ *----------------------------------------------------------
+ * Style Overrides
+ * ---------------------------------------------------------
+ */
+
+
+
+$brand-default: $grey-800;
+
+$border-radius-default: 0px !default;
+
+$navbar-bg: #607D8B !default;
+$navbar-shadow: 0 2px 4px rgba(0,0,0,.3);
+$nav-active-bg: #f4f4f4 !default;
+
+$sidebar-shadow: 3px 3px 10px rgba(0,0,0,.15);
+$sidebar-menu-shadow: 0px 1px 3px rgba(51, 51, 51, 0.38);
+
+/* Output font-size classes */
+@for $i from 8 through 29 {
+	.f-#{$i} { font-size: #{$i}px !important; }
+}
+
+$num: 50;
+@while $num > 29 {
+    .f-#{$num} { font-size: #{$num}px !important; }
+    $num: $num - 5;
+}
+
+/* Generate Margin Class (margin, margin-top, margin-bottom, margin-left, margin-right) */
+@mixin output-margin-classes($key){
+	.m-#{$key} {
+        margin: #{$key}px !important;
+    }
+
+    .m-t-#{$key} {
+        margin-top: #{$key}px !important;
+    }
+
+    .m-b-#{$key} {
+        margin-bottom: #{$key}px !important;
+    }
+
+    .m-l-#{$key} {
+        margin-left: #{$key}px !important;
+    }
+
+    .m-r-#{$key} {
+        margin-right: #{$key}px !important;
+    }
+}
+
+$mnum: 0;
+@while $mnum < 10 {
+    @include output-margin-classes($mnum);
+    $mnum: $mnum + 1;
+}
+
+$mnum: 10;
+@while $mnum <= 30 {
+    @include output-margin-classes($mnum);
+    $mnum: $mnum + 5;
+}
+
+
+/* Generate Padding Class (padding, padding-top, padding-bottom, padding-left, padding-right) */
+@mixin output-padding-classes($key){
+	.p-#{$key} {
+        padding: #{$key}px !important;
+    }
+
+    .p-t-#{$key} {
+        padding-top: #{$key}px !important;
+    }
+
+    .p-b-#{$key} {
+        padding-bottom: #{$key}px !important;
+    }
+
+    .p-l-#{$key} {
+        padding-left: #{$key}px !important;
+    }
+
+    .p-r-#{$key} {
+        padding-right: #{$key}px !important;
+    }
+}
+
+$pnum: 0;
+@while $pnum < 10 {
+    @include output-padding-classes($pnum);
+    $pnum: $pnum + 1;
+}
+
+$pnum: 10;
+@while $pnum <= 30 {
+    @include output-padding-classes($pnum);
+    $pnum: $pnum + 5;
+}
+
+
+/* Output font-weight classes */
+/*.f-100 { font-weight: 100 !important; }
+.f-200 { font-weight: 200 !important; }
+.f-300 { font-weight: 300 !important; }
+.f-400 { font-weight: 400 !important; }
+.f-500 { font-weight: 500 !important; }
+.f-700 { font-weight: 700 !important; }*/
+
+/*
+ *--------------------------------------
+ * File: _sidebar-and-main-panel.scss
+ * Line: 16+ 93+ 173 263+ 367+ 410+ 418+
+ *--------------------------------------
+ */
+.sidebar,
+.off-canvas-sidebar{
+    box-shadow: $sidebar-shadow;
+
+	.sidebar-wrapper{
+        height: calc(100vh - 100px);
+
+	}
+
+	.nav{
+		li{
+			> a{
+            	margin: 10px 10px 0;
+			}
+
+			&:first-child > a{
+                margin: 0 10px;
+            }
+
+			&.active > a{
+                background-color: rgba(200, 200, 200, 0.2);
+                color: $black-color;
+                box-shadow: none;
+            }
+
+			&.active > a,
+            &.active > a i{
+                color: $black-color;
+            }
+		}
+	}
+
+	.logo{
+		padding: 13px $padding-base;
+	}
+
+	&[data-background-color="default"]{
+        @include sidebar-background-color($white-color, $black-color);
+    }
+}
+
+.main-panel{
+    > .content{
+        min-height: calc(100vh - 145px);
+    }
+}
+
+@media (min-width: $screen-md) {
+    .hover-collapse{
+        box-shadow: $sidebar-menu-shadow;
+        border-radius: $border-radius-default;
+    }
+
+	.sidebar-mini{
+		.sidebar{
+			.logo-mini{
+            	padding: 13px 15px;
+            }
+
+			.nav{
+                margin-top: 15px;
+			}
+		}
+	}
+}
+
+.nav:before {
+    display: block;
+    content: " ";
+}
+
+/*
+ *-------------------------
+ * File: _button.scss
+ * Line: 178+, 217+
+ *-------------------------
+ */
+.navbar .navbar-minimize button{
+	&.btn-just-icon{
+        padding: 10px 10px;
+		color: $white-color;
+        background-color: rgba(0,0,0,.09);
+
+        i{
+            padding: 0px;
+            top:0;
+            width: auto;
+        }
+
+        &:hover,
+        &:active,
+        &:focus{
+			color: $white-color;
+            background-color: rgba(0,0,0,.09);
+        }
+    }
+}
+
+.navbar .navbar-nav > li > {
+	a:not(.btn){
+        .material-icons{
+            margin-top: 0px;
+            margin-right: 0px;
+        }
+    }
+}
+
+/*
+ *--------------------------------------
+ * File: _navbars.scss
+ * Line: 36+
+ *--------------------------------------
+ */
+.navbar {
+    color: $white-color;
+    border-radius: $border-radius-default;
+    box-shadow: $navbar-shadow;
+	border-bottom: 0px;
+    padding: 10px 0 10px 0;
+
+	.navbar-brand {
+        font-weight: 400;
+		height: auto;
+        color: $white-color;
+		padding: 8px 15px;
+
+		&:hover,
+		&:focus {
+			color: $white-color;
+		}
+	}
+
+	.navbar-minimize{
+		padding: 0;
+	}
+
+    .notification{
+        border: 0px;
+        font-size: 10px;
+        background: #d9534f;
+        min-width: 15px;
+        padding: 1px 5px;
+        height: 15px;
+        border-radius: $border-radius-small;
+        line-height: 14px;
+    }
+
+	.navbar-nav {
+        > li > a {
+            color: $white-color;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            &:hover,
+            &:focus {
+                color: $white-color;
+                background-color: rgba(0,0,0,.08);
+            }
+
+			.material-icons,
+            .fa{
+                font-size: 24px;
+            }
+
+			&.btn:not(.btn-just-icon){
+                .fa{
+                    margin-top: 0px;
+                    margin-right: 0px;
+                }
+            }
+		}
+
+		> .open > a {
+			&,
+			&:hover,
+			&:focus {
+				color: $white-color;
+                background-color: rgba(0,0,0,.08);
+			}
+		}
+	}
+
+    &.navbar-default{
+        background-color: $navbar-bg;
+        border-bottom: 0;
+
+        .logo-container .brand{
+              color: $white-color;
+        }
+    }
+}
+
+.navbar-absolute{
+    padding-top: 10px;
+}
+
+/*.navbar-fixed{
+    position: fixed;
+    top: 0;
+    right:0;
+    width: 100%;
+    z-index: 1029;
+}*/
+
+/*
+ *-------------------------
+ * File: _footers.scss
+ * Line:
+ *-------------------------
+ */
+footer {
+    padding: $padding-small-horizontal 0;
+}
+
+/*
+ *-------------------------
+ * File: _card.scss
+ * Line: 8
+ *-------------------------
+ */
+.card{
+    border-radius: $border-radius-default;
+}
+
+/*
+ *--------------------------------------
+ * File: mixins/_sidebar-color.scss
+ * Line: 36+
+ *--------------------------------------
+ */
+@mixin sidebar-background-color($background-color, $font-color){
+    .nav{
+        li{
+            > a{
+                color: $font-color;
+            }
+            i{
+                color: rgba($font-color, .8);
+            }
+
+            &.active,
+            &:hover{
+                > [data-toggle="collapse"]{
+                    color: $font-color;
+
+                    i{
+                        color: rgba($font-color, .8);
+                    }
+                }
+            }
+        }
+    }
+    .user{
+        a{
+            color: $font-color;
+        }
+    }
+    .simple-text{
+        color: $font-color;
+    }
+    .sidebar-background:after{
+        background: $background-color;
+        opacity: .8;
+    }
+
+	background: $background-color;
+    opacity: .8;
+}
+
+
+
+
+    .icon.icon-primary {
+      color: #9c27b0; }
+    .icon.icon-info {
+      color: #00bcd4; }
+    .icon.icon-success {
+      color: #4caf50; }
+    .icon.icon-warning {
+      color: #ff9800; }
+    .icon.icon-danger {
+      color: #f44336; }
+    .icon.icon-rose {
+      color: #e91e63; }
+
+
+ /*-------------------------
+  Grid
+--------------------------*/
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+
+ /*-------------------------
+  Card
+--------------------------*/
+$card-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+
+$header-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+$sidebar-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+/*@sidebar-shadow: 3px 3px 10px rgba(51, 51, 51, 0.38);*/
+
+
+// Reduced top and bottom margin to reduce vertical gutter
+.card {
+    margin: 10px 0;
+}
+
+//Card Testimonial
+.card-testimonial{
+    .card-avatar{
+    	margin: 20px auto -40px;
+    }
+}
+
+// Card with background color black
+.card-weather  {
+	background: #42A5F5;
+	color:#ffffff;
+}
+
+// card profile page
+
+.card-profile {
+	.card-avatar {
+		margin: 50px auto 0;
+	}
+	.bg-info {
+    	color: #dcf2f8;
+    	background-color: #23b7e5;
+	}
+	.bg-info-alt {
+    	color: #dcf2f8;
+    	background-color: #16aad8;
+	}
+    .card-footer {
+    	margin: 0px 15px 0px 15px;
+    	padding: 0px;
+    	div {
+    	    display:block;
+    	}
+	}
+	.profile-social-wrapper{
+		padding: 20px;
+		text-align: center;
+	}
+	.profile-count{
+		color:#ffffff;
+		font-size: 24px;
+		display:block;
+		margin-bottom: 5px;
+	}
+}
+
+
+//timeline
+
+.timeline.timeline-simple > li > .timeline-image {
+    left: 5%;
+}
+
+.timeline > li > .timeline-image {
+    left: 5%;
+    width: 50px;
+    height: 50px;
+    line-height: 51px;
+    text-align: center;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    margin-left: -24px;
+    z-index: 100;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+
+    img {
+		width:100%;
+		line-height: inherit;
+		border-radius: 500px;
+    }
+
+}
+
+
+//Login page
+
+.login-page{
+
+    .card-login{
+
+        .card-header{
+            margin-top:0px;
+            margin-bottom: 20px;
+
+        }
+    	 h5 {
+    		margin-bottom: 0px;
+    	}
+    }
+
+}
+
+
+//Invoice Page
+
+.invoice {
+    min-width: 1100px;
+    max-width: 1170px;
+}
+
+.i-logo {
+        width: 150px;
+}
+
+.i-table {
+    .highlight {
+        background-color: #eee;
+        border-bottom: 1px solid darken(#eee, 3%);
+    }
+
+    td.highlight {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+//Error page 404
+
+.four-zero {
+	height: 100vh;
+	background-color: $brand-primary;
+}
+
+
+.fz-block {
+	background: #557382;
+	border-radius: 2px;
+	position: absolute;
+	top: 50%;
+	margin-top: -150px;
+	color: #ECF0F1;
+	text-align: center;
+	padding: 25px;
+	height: 300px;
+	width: 500px;
+	left: 50%;
+	margin-left: -250px;
+
+	h2 {
+		font-size: 130px;
+		line-height: 100%;
+		color: #ECF0F1;
+		font-weight: 100;
+	}
+
+
+	@media (max-width: $screen-xs-max) {
+		width: #{"calc(100% - 40px)"};
+		left: 20px;
+		margin-left: 0;
+		height: 260px;
+		margin-top: -130px;
+
+		h2 {
+			font-size: 90px;
+		}
+	}
+
+	small {
+		display: block;
+		font-size: 26px;
+		margin-top: -10px
+	}
+}
+
+.fzb-links {
+	margin-top: 20px;
+
+	& > a {
+		font-size: 16px;
+		display: inline-block;
+		color: #ECF0F1;
+		margin: 0 1px;
+		line-height: 30px;
+		width: 30px;
+		height: 30px;
+		background: rgba(0, 0, 0, 0.09);
+		border-radius: 50%;
+		text-align: center;
+
+		&:hover {
+			background: rgba(0, 0, 0, 0.2);
+		}
+	}
+}
+
+
+
+//OR Rule
+
+.or-rule {
+    position: relative;
+    display: block;
+    margin: 15px 0;
+    text-align: center;
+    color: #222;
+    opacity: .3;
+}
+
+.or-rule:before, .or-rule:after {
+    display: block;
+    border-top: 1px solid #eeeeee;
+    content: "";
+    position: absolute;
+    width: 35%;
+    left: 10%;
+    top: 50%;
+}
+
+.or-rule:after {
+    left: auto;
+    right: 10%;
+}
+
+
+
+/*-------------------------
+   Streamline
+--------------------------*/
+
+.text-muted {
+    color: #777777;
+}
+.streamline{
+	.sl-item{
+		position: relative;
+    	padding-bottom: 12px;
+    	border-left: 1px solid #ccc;
+
+		.sl-content {
+			margin-left: 24px;
+		}
+
+		p{
+			margin-bottom: 10px;
+		}
+
+		.sl-avatar {
+			position: absolute;
+			left: -22px;
+
+			img{
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+			}
+		}
+
+		.text-muted {
+			color: inherit;
+			opacity: .6;
+		}
+
+		.fz-sm {
+			font-size: 12px !important;
+		}
+	}
+
+	.sl-primary {
+		border-left-color: #188ae2;
+	}
+	.sl-danger {
+		border-left-color: #ff5b5b;
+	}
+	.sl-success {
+		border-left-color: #10c469;
+	}
+	.sl-warning {
+		border-left-color: #f9c851;
+	}
+
+	.sl-item:before {
+		content: '';
+		position: absolute;
+		left: -6px;
+		top: 0;
+		background-color: #ccc;
+		width: 12px;
+		height: 12px;
+		border-radius: 100%;
+	}
+
+	.sl-primary:before, .sl-primary:last-child:after {
+		background-color: #188ae2;
+	}
+	.sl-danger:before, .sl-danger:last-child:after {
+		background-color: #ff5b5b;
+	}
+	.sl-success:before, .sl-success:last-child:after {
+		background-color: #10c469;
+	}
+	.sl-warning:before, .sl-warning:last-child:after {
+		background-color: #f9c851;
+	}
+
+	&.sl-style-2{
+		.sl-item:before {
+			top: 6px;
+			background-color: #fff;
+			width: 11px;
+			height: 11px;
+
+			border-color: #ccc;
+			border-style: solid;
+			border-width: 1px;
+			border-radius: 10px;
+		}
+
+		.sl-primary:before, .sl-primary:last-child:after {
+			border-color: #188ae2;
+		}
+		.sl-danger:before, .sl-danger:last-child:after {
+			border-color: #ff5b5b;
+		}
+		.sl-success:before, .sl-success:last-child:after {
+			border-color: #10c469;
+		}
+		.sl-warning:before, .sl-warning:last-child:after {
+			border-color: #f9c851;
+		}
+
+	}
+
+}
+
+/* Theme Styles */
+.sidebar,
+.off-canvas-sidebar{
+	&[data-background-color="gray"]{
+        background-color: #434a54;
+    }
+    &[data-background-color="green"]{
+        background-color: green;
+    }
+}
+
+
+/*
+ *--------------------------------------
+ * File: mixins/_topbar-color.scss
+ *--------------------------------------
+ */
+@mixin topbar-background-color($bg-color, $font-color){
+    background-color: $bg-color;
+	color: $font-color;
+
+	.navbar-brand {
+		color: $font-color;
+
+		&:hover,
+		&:focus {
+			color: $font-color;
+		}
+	}
+
+
+	.navbar-nav {
+		> li > a {
+			color: $font-color;
+
+			&:hover,
+			&:focus {
+				color: $font-color;
+				background-color: rgba(0,0,0,.08);
+				/*color: rgba($font-color, .8);*/
+			}
+		}
+
+		> .open > a {
+			&,
+			&:hover,
+			&:focus {
+				color: $font-color;
+				background-color: rgba(0,0,0,.08);
+			}
+		}
+	}
+
+	/*.logo-container .brand{
+		  color: $font-color;
+	}*/
+
+}
+
+
+
+.navbar {
+    &[data-topbar-color="default"]{
+		@include topbar-background-color($navbar-bg, $white-color);
+	}
+
+	&[data-topbar-color="red"]{
+		@include topbar-background-color($brand-danger, $white-color);
+	}
+
+	&[data-topbar-color="blue"]{
+		@include topbar-background-color($brand-primary, $white-color);
+	}
+
+	&[data-topbar-color="green"]{
+		@include topbar-background-color($brand-success, $white-color);
+	}
+
+	&[data-topbar-color="yellow"]{
+		@include topbar-background-color($brand-warning, $white-color);
+	}
+
+	&[data-topbar-color="white"]{
+		@include topbar-background-color($white-color, $gray-dark);
+	}
+
+
+
+}

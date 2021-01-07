@@ -1,0 +1,680 @@
+<noscript><meta http-equiv="refresh" content="0;url=enablejava.html"></noscript>
+ 
+	
+	
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+              <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id= "></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag()
+            {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', ' ');
+        </script>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Welcome to Mirror Trading International Member Dashboard</title>
+
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+
+     <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+
+    <link href="css/epoch.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+  <script type="text/javascript">//<![CDATA[
+
+    window.onload=function(){
+      
+// Restricts input for the given textbox to the given inputFilter.
+function setInputFilter(textbox, inputFilter) {
+  ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
+    textbox.addEventListener(event, function() {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value;
+        this.oldSelectionStart = this.selectionStart;
+        this.oldSelectionEnd = this.selectionEnd;
+      } else if (this.hasOwnProperty("oldValue")) {
+        this.value = this.oldValue;
+        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+      } else {
+        this.value = "";
+      }
+    });
+  });
+}
+
+
+// Install input filters.
+setInputFilter(document.getElementById("amounts"), function(value) {
+  return /^\d*[.]?\d*$/.test(value); });
+    }
+
+  //]]></script>
+
+
+
+    <!-- SugarRush CSS -->
+    <!-- <link href="css/sugarrush.css" rel="stylesheet"> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="">
+    <div class="animsition">  
+    
+   
+      <!-- - - - - - - - - - - - - -->
+      <!-- start of SIDEBAR        -->
+      <!-- - - - - - - - - - - - - -->
+   
+      <!-- start of LOGO CONTAINER -->
+       <div id="logo-container" class="text-center">
+         <a href="index.php.html" id="logo-img">
+           <img src="back-office_poland.jpg" alt="Home Page" class="big-logo" style="margin-top: -3px;width: 250px;">
+           <img src="images/mtismalllogow.png" data-no-retina="" class="small-logo" alt="" />
+          
+        </a>
+      </div>
+      <!-- end of LOGO CONTAINER -->
+
+      <!-- - - - - - - - - - - - - -->
+      <!-- start of SIDEBAR        -->
+      <!-- - - - - - - - - - - - - -->
+      <div id="sidebar">
+        <div class="sidebar_scroll"> <!-- start of slimScroll -->
+
+          <ul class="nav lg-menu" id="main-nav">
+            <li class="sidebar-title">
+            <li><a href="index.php.html"> <i class="ti-dashboard"></i> <span>Dashboard</span></a>
+            
+                         <li><a href="#"> <i class="ti-receipt"></i> <span>Profile</span><i class="pull-right has-submenu ti-angle-right"></i></a>
+             <ul class="nav nav-submenu submenu-hidden">
+             <li><a href="update-profile.php.html">Edit Profile</a></li>
+             <li><a href="../../../mymticlub/userpanel/change-password.php">Change Password</a></li>
+             <li><a href="../../../mymticlub/userpanel/2fa.php">2FA</a></li>
+             </ul>
+             </li>
+
+                          <li><a href="#"> <i class="ti-rocket"></i> <span>News & Updates</span> <i class="pull-right has-submenu ti-angle-right"></i> </a>
+              <ul class="nav nav-submenu submenu-hidden">
+                <li><a href="../../../mymticlub/telegram" target="_blank"><i class="ti-announcement"></i><span>Telegram Chat</span></a></li>
+                <li><a href="../../../mymticlub/userpanel/youtube-channel.php" target="_blank"><i class="ti-youtube"></i><span>YouTube Channel</span></a></li>
+                <li><a href="official_announcement.php.html"> <i class="ti-comment-alt"></i> <span>Announcements</span></a> </li>
+                <li><a href="../../../mymticlub/userpanel/ceo-newsletter.php"> <i class="ti-envelope"></i> <span>CEO Newsletter</span></a> </li>
+              </ul>
+            </li>
+            
+             
+                
+           
+            <li><a href="#"> <i class="ti-wallet"></i> <span>Wallet Section </span> <i class="pull-right has-submenu ti-angle-right"></i> </a>
+              <ul class="nav nav-submenu submenu-hidden">
+                 <!--<li><a href="upload-payment.php">Add Funds</a></li>-->
+               <li><a href="request_fund_history.php.html">Add Funds History</a></li>
+                <li><a href="pending-bonuses.php.html">Pending Bonuses</a></li>
+                <li><a href="ewallet-transaction-history.php.html">Wallet Transaction History</a></li>
+               
+                <li><a href="external-fund-tranfer.php.html">P2P Fund Transfer</a></li>
+                <li><a href="../../../mymticlub/userpanel/internal-fund-transfer.php">Internal Fund Transfer</a></li>
+                   <li><a href="external-fund-transfer-list.php.html"> Fund Transfer History</a></li>
+                 <li><a href="withdrawal-section.php.html"> Wallet Withdrawal </a></li>  
+                </ul>
+            </li>
+
+              <li><a href="#"> <i class="ti-user"></i> <span>Team Details</span> <i class="pull-right has-submenu ti-angle-right"></i> </a>
+              <ul class="nav nav-submenu submenu-hidden">
+                <li><a href="direct-sponsor-member-report.php.html">Personally Referred Members</a></li>
+                <li><a href="deleted-member-report.php.html">Deleted Members</a></li>
+                <li><a href="downline-member-report.php.html">Total Team Members</a></li>
+                <li><a href="downline-member-report-left.php.html">Left Team Members</a></li>
+                <li><a href="downline-member-report-right.php.html">Right Team Members</a></li>
+                   <li><a href="binary-tree.php.html">Binary Genealogy Tree</a></li>
+
+              </ul>
+            </li>
+              <li><a href="#"> <i class="ti-bar-chart"></i> <span>My Bonus Report</span> <i class="pull-right has-submenu ti-angle-right"></i> </a>
+              <ul class="nav nav-submenu submenu-hidden"> 
+                  <li><a href="../../../mymticlub/userpanel/roi-income-report.php">Trading Bonus Report</a></li> 
+                               <li><a href="binary-income-report.php.html">Binary Income Report</a></li>
+                               <li><a href="#">Binary Amount Report (Offline)</a></li>
+               <li><a href="P1LB-shares.php.html">P1LB Shares</a></li>
+               <li><a href="P1LB-income-report.php.html">P1LB Report</a></li>
+               <li><a href="P2LB-income-report.php.html">P2LB Report</a></li>
+                    
+               
+
+
+              </ul>
+            </li>
+            <li><a href="#"> <i class="ti-bar-chart"></i> <span>Resources</span> <i class="pull-right has-submenu ti-angle-right"></i> </a>
+              <ul class="nav nav-submenu submenu-hidden"> 
+                  <li><a href="https://www.mtimembers.com/" target="_blank">Member Portal</a></li>
+               <li><a href="../../../mymticlub/userpanel/presentations/MTI-Success-Guide.pdf" arget="_blank">MTI Success Guide</a></li>
+              </ul>
+            </li>
+
+           
+            
+
+<li><a href="../../../mymticlub/userpanel/referal.php"> <i class="ti-link"></i> <span>Referral Link</span></a> </li>
+  
+ <li><a href="../../../mymticlub/userpanel/register.php?referral=CryptoKaren" target="_blank"> <i class="ti-pulse"></i> <span>Downline Registration</span></a> </li>
+        
+
+            <li>
+                <a href="#"> <i class="ti-file"></i> <span>Governance</span> <i class="pull-right has-submenu ti-angle-right"></i> </a>
+                <ul class="nav nav-submenu submenu-hidden">
+            <li>
+                <a href="advice-disclaimer.php.html">1. Advice Disclaimer</a>
+            </li>
+            <li>
+                <a href="general-terms-and-conditions.php.html">2. General Terms & Conditions</a>
+            </li>
+            <li>
+                <a href="general-policies.php.html">3. General Policies</a>
+            </li>
+            <li>
+                <a href="../../../mymticlub/userpanel/core-values.php">4. Core Values</a>
+            </li>
+            <li>
+                <a href="../../../mymticlub/userpanel/code-of-conduct.php">5. Code of Conduct</a>
+            </li>
+            <li>
+                <a href="../../../mymticlub/userpanel/compensation-plan.php">6. Compensation Plan</a>
+            </li>
+            <li>
+                <a href="sponsor-terms-and-conditions.php.html">7. Sponsor Terms & Conditions</a>
+            </li>
+            <li>
+                <a href="protection-of-personal-information-popi.php.html">8. Protection of Personal Information</a>
+            </li>
+            </ul>
+            </li>
+
+            <li><a href="../../../mymticlub/logout.php"> <i class="ti-power-off"></i> <span>Logout</span></a> </li>
+
+
+
+          
+     
+
+          </ul>
+        </div> <!-- end of slimScroll -->
+      </div>
+      <!-- - - - - - - - - - - - - -->
+      <!-- end of SIDEBAR          -->
+      <!-- - - - - - - - - - - - - -->      <!-- - - - - - - - - - - - - -->
+      <!-- end of SIDEBAR          -->
+      <!-- - - - - - - - - - - - - -->
+
+
+      <main id="playground">
+
+        
+        <!-- - - - - - - - - - - - - -->
+        <!-- start of TOP NAVIGATION -->
+        <!-- - - - - - - - - - - - - -->
+   
+                       <nav class="navbar navbar-top navbar-static-top">
+          <div class="container-fluid">
+
+            <!-- sidebar collapse and toggle buttons get grouped for better mobile display -->
+            <div class="navbar-header nav">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand show-hide-sidebar hide-sidebar" href="#"><i class="fa fa-outdent"></i></a>
+              <a class="navbar-brand show-hide-sidebar show-sidebar" href="#"><i class="fa fa-indent"></i></a>
+                 <h4 style="width: 420px;">Current BTC Price:  1 BTC =  USD 23106.38</h4>
+            </div>
+           
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-top">
+
+           
+
+              <ul class="nav navbar-nav">
+
+                <!-- start of LANGUAGE MENU -->
+            <!-- <li class="dropdown language-nav">
+                   <select name="currency" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" style="
+    padding: 8px;color: #000;margin-top:11px; ">
+    
+                                       
+    <option value="currency.php?currency=SGD"  >SGD</option>   
+
+                        
+                                               
+    <option value="currency.php?currency=HKD"  >HKD</option>   
+
+                        
+                                               
+    <option value="currency.php?currency=USD"  selected  >USD</option>   
+
+                        
+                                               
+    <option value="currency.php?currency=MYR"  >MYR</option>   
+
+                        
+                                               
+    <option value="currency.php?currency=IDR"  >IDR</option>   
+
+                        
+                                               
+    <option value="currency.php?currency=THB"  >THB</option>   
+
+                        
+                                               
+    <option value="currency.php?currency=PHP"  >PHP</option>   
+
+                        
+                                               
+    <option value="currency.php?currency=INR"  >INR</option>   
+
+                        
+                                               
+    <option value="currency.php?currency=JPY"  >JPY</option>   
+
+                        
+                                               
+    <option value="currency.php?currency=RMB"  >RMB</option>   
+
+                        
+                                               
+    <option value="currency.php?currency=TWD"  >TWD</option>   
+
+                        
+                         </select>
+                  
+                </li> -->
+
+                 
+                <!-- end of LANGUAGE MENU -->
+                
+                <!-- start of OPEN NOTIFICATION PANEL BUTTON -->
+                                <!-- <li>
+                  <a href="#" class="btn-show-chat">
+                    <i class="ti-announcement"></i><span class="badge badge-warning">0</span>
+                  </a>
+                </li>
+ -->
+                  <style type="text/css">.goog-te-gadget .goog-te-combo
+                  {
+                    color:#000;
+                    background-color: #fff ;
+                    padding:10px;
+                    width:150px;
+                  }
+                  .goog-te-gadget {
+                    color:#0a899a;
+                  }
+                  .goog-logo-link, .goog-logo-link:link, .goog-logo-link:visited, .goog-logo-link:hover, .goog-logo-link:active{
+                    color:#0a899a;
+                  }
+                  .goog-logo-link img{
+                    display:none;
+                    display:hidden;
+                  }
+                  .goog-te-banner-frame{
+                    display:none;
+                  }
+                  .skiptranslate{
+                    margin-top: 4px !important;
+					margin-left: 115px;
+                  }
+				  .goog-te-gadget img{
+						display:none !important;
+					}
+					.goog-te-gadget-simple .goog-te-menu-value span{
+						padding-right:5px !important;
+					}
+					.goog-te-banner-frame{
+						display:none !important;
+					}
+                  </style>
+
+  
+                <!-- <li  data-toggle="tooltip" data-placement="right">
+                  <div id="google_translate_element" style="top:0px;"></div>
+                <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </li>-->
+                <!-- end of OPEN NOTIFICATION PANEL BUTTON -->
+
+              </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+
+                <!-- start of USER MENU -->
+                <li class="dropdown user-profile">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="height:50px;">
+                    <div class="user-img-container">
+                      <img src="images/male.jpg" alt="My Image"> 
+                    </div> 
+                    Welcome CryptoKaren ! <br/> <!--<span class="chat-status success"></span>-->
+                  </a>
+
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="update-profile.php.html">Edit Profile</a></li>
+                    <li><a href="../../../mymticlub/userpanel/change-password.php">Change Password</a></li>
+                    <li><a href="../../../mymticlub/userpanel/2fa.php">2FA</a></li>
+                    <li><a href="../../../mymticlub/logout.php">Logout</a></li>
+                  </ul>
+                </li>
+                <!-- end of USER MENU -->
+
+              </ul>
+            </div>
+            <!-- end of navbar-collapse -->
+          </div>
+          <!-- end of container-fluid -->
+        </nav>        <!-- - - - - - - - - - - - - -->
+        <!-- end of TOP NAVIGATION   -->
+        <!-- - - - - - - - - - - - - -->
+
+
+        <!-- PAGE TITLE -->
+        <section id="page-title" class="row">
+
+          <div class="col-md-8">
+            <h1>Transfer To Another MTI User </h1>
+            <p><div align="center" style="color:#900;font-weight:bold;"></div></p>
+          </div>
+
+             
+             
+          <div class="col-md-4">
+  <a href="external-fund-transfer-list.php.html"><input type="submit" name="updates1" value="View Transaction" class="btn btn-primary"></a>   
+           
+
+          </div>
+        </section> <!-- / PAGE TITLE -->
+
+        <div class="container-fluid">
+          <div class="row">
+       
+            <div class="col-md-6" style="float:none; margin-left:auto; margin-right:auto;">
+        
+        <script>
+            function checkavailablebalance()
+            {
+                var withdrawamount = parseFloat(document.forms["bankinfo"]["amounts"].innerHTML).toFixed(8);
+                var availablebalance = parseFloat(document.forms["bankinfo"]["availablebalance"].innerHTML).toFixed(8);
+                if(withdrawamount.value > availablebalance.value)
+                {
+                    window.alert("Amount exceeds available balance.");
+                    document.getElementById('send2').style.display='none';
+                    document.getElementById('send').style.display='inline';
+                    withdrawamount.focus();
+                    return false;
+                }
+            }
+       </script>
+
+
+           <form name="bankinfo" method="post" action="../../../mymticlub/userpanel/external-fund-transfer-email-confirm.php" onsubmit="return checkavailablebalance()">
+              <section class="panel">
+                     <br>
+                   <h3 class="text-center">Peer-to-Peer Fund Transfer<br><h3 class="text-center" style="color:#FF0000;font-weight:bold;">CryptoKaren</h3></h3>
+             
+                <div class="panel-body">
+
+                <p><div align="center" style="color:#900;font-weight:bold;"></div></p>
+                <h4><strong>Income Wallet Balance:</strong> BTC 0.00000000<h4><h4><strong><font color="green">Available Income Wallet Balance: BTC 0.00000000</font></strong><h4><h4><strong>Pending Income Wallet Balance:</strong> BTC 0.00000000<h4>                <!-- $_SESSION['currency']; -->
+                <!--<p>Note: wallet fund transfer 8% charge will be only if user transfer fund in upline</p>--></header>
+                <div class="panel-body">
+                <input name="wallet" id="wallet" type="hidden" tabindex="1" required class="" style="width:4%;" value="roi_e_wallet" checked="checked" />
+            
+                    <div class="form-group">
+                      <label for="exampleInputAddress">Send Amount From </label>
+                      <div class="input-group">
+                        <!-- <span class="input-group-addon"></span> -->
+                        
+  
+  <!-- <input type="radio" name="walletfrom" required class="form-control" value="roi_e_wallet">Income Wallet
+ -->
+
+
+                      </div>
+                    </div>
+
+           <div class="form-group">
+                      <label for="exampleInputAddress">Enter Recipient's MTI Userid / Username</label>
+                      <div class="input-group">
+                        <span class="input-group-addon"></span>
+                        <input type="text" name="user" required value="" class="form-control" id="rid">
+                        <span id="checksponser"></span> 
+                      </div>
+                    </div>
+
+           <div class="form-group">
+                      <label for="exampleInputAddress">Enter Amount to Transfer in BTC</label>
+                      <div class="input-group">
+                        <span class="input-group-addon"></span>
+                        <input type="text" name="amounts" required value="" class="form-control" id="amounts">
+                        <input type="hidden" name="availablebalance" value="0.00000000" class="form-control" id="availablebalance" required>
+                      </div>
+                    </div>
+                         
+                 <div class="row">
+            <div class="col-md-12">
+              <div class="panel">
+                <div class="panel-body">
+                  <input type="submit" name="update" id="send" value="Transfer" onclick="hidebtn();" class="btn btn-primary"> 
+                  <input type="submit" name="submit2" id="send2" value="Processing..." style="display:none;" disabled class="btn btn-primary">
+                  
+                  <script type="text/javascript">
+                    function hidebtn()
+                    {
+                        document.getElementById('send').style.display='none';
+                        document.getElementById('send2').style.display='inline';
+                    }
+                  </script>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+              </section>
+
+</form>
+            </div> <!-- / col-md-6 -->
+
+          
+
+          </div> <!-- / row -->
+
+         
+
+        </div> <!-- / container-fluid -->
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script>
+    
+jQuery(document).ready(function(){
+  jQuery(function() {
+        jQuery(this).bind("contextmenu", function(event) {
+            event.preventDefault();
+        });
+    });
+});
+
+
+document.onkeypress = function (event) {  
+    event = (event || window.event);  
+    if (event.keyCode == 123) {  
+        return false;  
+    }  
+}  
+document.onmousedown = function (event) {  
+    event = (event || window.event);  
+    if (event.keyCode == 123) {  
+        return false;  
+    }  
+}  
+document.onkeydown = function (event) {  
+    event = (event || window.event);  
+    if (event.keyCode == 123) {  
+        return false;  
+    }  
+} 
+</script>
+ <footer>
+        <p>Powered by <span class="primary-darken-2">Mirror Trading International</span>. Copyright 2020. All Rights Reserved.</p>
+      </footer>
+ 
+    </main> <!-- /playground -->
+
+
+    <!-- - - - - - - - - - - - - -->
+    <!-- start of NOTIFICATIONS  -->
+    <!-- - - - - - - - - - - - - -->
+  <aside id="multi-panel">
+      <div class="container-fluid no-margin slimscroll">
+
+        <ul id="multi-panel-tabs" class="nav nav-tabs" role="tablist">
+          <li><a href="#" class="close-multi-panel"><i class="fa fa-indent"></i></a></li>
+         <!-- <li role="presentation" class="active"><a href="#contacts" role="tab" id="contacts-tab" data-toggle="tab" aria-controls="contacts" aria-expanded="true">Contacts</a></li>-->
+          <li role="presentation" class="active"><a href="#alerts" id="alerts-tab" role="tab" data-toggle="tab" aria-controls="alerts">Alerts</a></li>
+        </ul> 
+
+        <section class="panel ">
+            
+          <div id="multi-panel-tabs-content" class="tab-content">
+
+
+
+
+            <!-- Chat -->
+          <!--  <div role="tabpanel" class="tab-pane fade in active" id="contacts" aria-labelledby="contacts-tab">
+
+              <div class="widget chat-widget list-group">
+                <a class="list-group-item" href="#">
+                  <span class="chat-status success"></span> Daenerys Targaryen <span class="label label-warning pull-right">13</span>
+                </a>
+              </div>
+
+              <div class="widget chat-widget list-group">
+                <a class="list-group-item" href="#">
+                  <span class="chat-status success"></span> Tyrion Lannister
+                </a>
+              </div>
+
+              <div class="widget chat-widget list-group">
+                <a class="list-group-item" href="#">
+                  <span class="chat-status warning"></span> Cersei Lannister <span class="label label-warning pull-right">2</span>
+                </a>
+              </div>
+
+              <div class="widget chat-widget list-group">
+                <a class="list-group-item" href="#">
+                  <span class="chat-status danger"></span> Arya Stark
+                </a>
+              </div>
+
+              <div class="widget chat-widget list-group">
+                <a class="list-group-item" href="#">
+                  <span class="chat-status danger"></span> Sansa Stark
+                </a>
+              </div>
+
+            </div>--> <!-- / Chat -->
+
+            <!-- Alerts -->
+            <div role="tabpanel" class="tab-pane fade" id="alerts" aria-labelledby="alerts-tab">
+              
+            
+
+              <!-- MESSAGES WIDGET -->
+              <div class="widget messages-widget">
+                <h4 class="widget-title">New Messages</h4>
+                <ul class="list-group">
+
+                
+                </ul>
+              </div> <!-- / MESSAGES WIDGET -->
+
+              <!-- MESSAGES WIDGET -->
+             <!-- / MESSAGES WIDGET -->
+
+
+            </div> <!-- / Alerts -->
+
+          </div>
+
+        </section>
+
+
+      </div>
+    </aside>    <!-- - - - - - - - - - - - - -->
+    <!-- start of NOTIFICATIONS  -->
+    <!-- - - - - - - - - - - - - -->
+
+    <div class="scroll-top">
+      <i class="ti-angle-up"></i>
+    </div>
+  </div> <!-- /animsition -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/raphael-min.js"></script>
+ <!--<script src="js/jquery-1.11.2.min.js"></script>-->
+<script src="js/js/jquery-3.3.1.js.html"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/jquery.animsition.min.js"></script>
+  <script src="js/d3.min.js"></script>
+  <script src="js/epoch.min.js"></script>
+
+  <script src="js/includes.js"></script>
+  <script src="js/sugarrush.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $("#rid").blur(function (e) {
+    var sid = $(this).val();
+ 
+    if(sid.length >= 1){
+    $.post('userfinder.php', {'sid':sid}, function(data) {
+    $("#checksponser").html(data);
+    // alert(data);
+    });
+    }
+    }); 
+    });
+  </script>
+  <!-- Start of mticlub Zendesk Widget script -->
+ 
+<!-- End of mticlub Zendesk Widget script -->
+  </body>
+</html>
