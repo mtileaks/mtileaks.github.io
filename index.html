@@ -165,6 +165,9 @@ section {
   height: 100vh;
   scroll-snap-align: start;
 }
+.hideit {
+	display: none;
+}
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
@@ -193,7 +196,7 @@ section {
 <div class="line-1" id="typedtext"></div>
 </div>
 </section>
-<section id="sec3">
+<section class="hideit" id="sec3">
 			<div class="MainTable" id="tablesID">
 			<table id="tableId" class="table striped table-border mt-4"
 			       data-role="table"
@@ -208,7 +211,6 @@ section {
 <span class="nothingtoseehere"> <span>
 
 <script type="text/javascript">
-
 var url = 'https://api.coindesk.com/v1/bpi/currentprice/ZAR.json';
 function addRowHandlers() {
   const numFormatter = new Intl.NumberFormat('en-US', {
@@ -335,6 +337,7 @@ var waypoint = new Waypoint({
  		$('body').addClass('stop-scrolling')
 		$('body').bind('touchmove', function(e){e.preventDefault()})
  	 	setTimeout("alertFunc()", 35000);
+		setTimeout("addRowHandlers()", 35500)
     this.destroy()
   },
   offset: 'bottom-in-view'
@@ -342,6 +345,7 @@ var waypoint = new Waypoint({
 
 function alertFunc() {
 $('body').removeClass('stop-scrolling')
+$('#sec3').removeClass('hideit')
 $('body').unbind('touchmove')
 }
 </script>
