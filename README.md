@@ -1,37 +1,22 @@
 ## Welcome to MTI Leaks
 
-You can use the [editor on GitHub](https://github.com/mtileaks/mtileaks.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+![Image](https://github.com/mtileaks/mtileaks.github.io/blob/main/landing.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+The data you are looking at has been scraped from (https://mymticlub.com) nothing other than google analitics tags and a zendesk support widget has been modified or altered.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Please share and distribute with anyone and everyone and make these scums famous, use this data as you please, after all it has been paid for by yours truly, 
+and help bring to book **EVERYONE** that has profited from the Mirror International Scam.
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+The table consists of the top 200 accounts that profited the most and are sorted via highest BTC bonus. Click any entries to see their backoffice and all transactions.
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+We are Anonymous. We are Legion. We do not forgive. We do not forget.
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+![Image](https://www.download3k.com/article_images/0/510/full_2_94dad6af8048080fcecda1cbd43a5251.png)
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mtileaks/mtileaks.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
