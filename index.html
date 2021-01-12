@@ -10,20 +10,6 @@
 		<script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 		<style>
-
-		/* Google Fonts */
-		@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-		/* Global */
-		.typewriter1 {
-			margin-top: 200px;
-			margin-bottom: 100px;
-		}
-		.typewriter1 {
-		  height: calc(100vh - 8em);
-		  padding: 4em;
-		  color: rgba(255,255,255,.75);
-		  font-family: 'Anonymous Pro', monospace;
-		}
 		.line-1{
 		    position: relative;
 		    top: 50%;
@@ -60,7 +46,6 @@
     margin: 100px;
 		margin-top: 200px !important;
 		background-color: white !important;
-		cursor: pointer !important;
 		color: green !important;
 		border-color: green !important;
 		}
@@ -84,9 +69,6 @@
 		a:not([href]):not([tabindex]) {
     color: green;
 		background-color: black;
-		}
-		.clickable {
-			cursor: pointer !important;
 		}
 		.input input {
     color: green;
@@ -161,20 +143,6 @@
   10% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(15px); opacity: 0;}
 }
-section {
-  height: 100vh;
-  scroll-snap-align: start;
-}
-.hideit {
-	display: none;
-}
-.stop-scrolling {
-  height: 100%;
-  overflow: hidden;
-}
-.pagination {
-	padding-bottom: 100px !important;
-}
 		</style>
     </head>
     <body>
@@ -183,17 +151,6 @@ section {
 			<div class="landed">
 			<img src="landing.png">
 		</div>
-		<div class="scroll-downs" id="scrolley">
-  <div class="mousey">
-    <div class="scroller"></div>
-  </div>
-	<div class="text">Scroll</div>
-</div>
-</div>
-</section>
-<section id="sec2">
-<div class="typewriter1" id="typewriter2">
-<div class="line-1" id="typedtext"></div>
 </div>
 </section>
 <section id="sec3">
@@ -276,70 +233,6 @@ function addRowHandlers() {
       }
   	}
   });
-}
-
-		$(document).ready(function(){
-    $(window).scroll(function(){
-        $("#hero-image").css("opacity", 1 - $(window).scrollTop() / ($('#hero-image').height() / 0.9));
-				$("#tablesID").css("opacity", 0 + $(window).scrollTop() / ($('#tablesID').height() / 2));
-    });
-});
-
-// set up text to print, each item in array is new line
-var aText = new Array(
-"The Truth Will Set You Free...",
-"But First It Will Piss You Off!",
-" ",
-"Below you will find a list",
-"Click on any name to uncover all.",
-"Your ignorance is their power.",
-"the key is spelled TXID",
-" ",
-" ",
-"We are Anonymous.We are Legion.We do not forgive.We do not forget.",
-"Expect us"
-);
-var iSpeed = 100; // time delay of print out
-var iIndex = 0; // start printing array at this posision
-var iArrLength = aText[0].length; // the length of the text array
-var iScrollAt = 20; // start scrolling up at this many lines
-
-var iTextPos = 0; // initialise text position
-var sContents = ''; // initialise contents variable
-var iRow; // initialise current row
-
-function typewriter()
-{
- sContents =  ' ';
- iRow = Math.max(0, iIndex-iScrollAt);
- var destination = document.getElementById("typedtext");
-
- while ( iRow < iIndex ) {
-  sContents += aText[iRow++] + '<br />';
- }
- destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "<span class='blink_me'>_</span>";
- if ( iTextPos++ == iArrLength ) {
-  iTextPos = 0;
-  iIndex++;
-  if ( iIndex != aText.length ) {
-   iArrLength = aText[iIndex].length;
-   setTimeout("typewriter()", 1000);
-  }
- } else {
-  setTimeout("typewriter()", iSpeed);
- }
-}
-
-var waypoint = new Waypoint({
-  element: document.getElementById('typewriter2'),
-  handler: function(direction) {
-		typewriter();
-    this.destroy()
-  },
-  offset: 'bottom-in-view'
-})
-
-function alertFunc() {
 }
 </script>
     </body>
