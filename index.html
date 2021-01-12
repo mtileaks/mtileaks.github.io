@@ -196,7 +196,7 @@ section {
 <div class="line-1" id="typedtext"></div>
 </div>
 </section>
-<section class="hideit" id="sec3">
+<section id="sec3">
 			<div class="MainTable" id="tablesID">
 			<table id="tableId" class="table striped table-border mt-4"
 			       data-role="table"
@@ -334,19 +334,12 @@ var waypoint = new Waypoint({
   element: document.getElementById('typewriter2'),
   handler: function(direction) {
 		typewriter();
- 		$('body').addClass('stop-scrolling')
-		$('body').bind('touchmove', function(e){e.preventDefault()})
- 	 	setTimeout("alertFunc()", 500);
-		setTimeout("addRowHandlers()", 510)
     this.destroy()
   },
   offset: 'bottom-in-view'
 })
 
 function alertFunc() {
-$('body').removeClass('stop-scrolling')
-$('#sec3').removeClass('hideit')
-$('body').unbind('touchmove')
 }
 </script>
     </body>
